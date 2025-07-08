@@ -1,7 +1,7 @@
     button {
         font-size: 1.5rem;
         padding: 1rem 2rem;
-        background-color: #4CAF50;
+        background-color: #541457;
         color: white;
         border: none;
         border-radius: 10px;
@@ -10,5 +10,5 @@
     }
 
     button:hover {
-        background-color: #45a049;
+        background-color: #622d66;
     }

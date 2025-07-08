@@ -7,51 +7,55 @@
 </head>
 <body>
     <!-- Major Chords Section ---------------------------------->
-    <audio id="Cmaj" src="AudioFiles/c-major-chord.mp3" preload="auto"></audio>
-    <audio id="Csmaj" src="AudioFiles/c-sharp-major-chord.mp3" preload="auto"></audio>
-    <audio id="Dmaj" src="AudioFiles/d-major-chord.mp3" preload="auto"></audio>
-    <audio id="Dsmaj" src="AudioFiles/d-sharp-major-chord.mp3" preload="auto"></audio>
-    <audio id="Emaj" src="AudioFiles/e-major-chord.mp3" preload="auto"></audio>
-    <audio id="Fmaj" src="AudioFiles/f-major-chord.mp3" preload="auto"></audio>
-    <audio id="Fsmaj" src="AudioFiles/f-sharp-major-chord.mp3" preload="auto"></audio>
-    <audio id="Gmaj" src="AudioFiles/g-major-chord.mp3" preload="auto"></audio>
-    <audio id="Gsmaj" src="AudioFiles/g-sharp-major-chord.mp3" preload="auto"></audio>
-    <audio id="Amaj" src="AudioFiles/a-major-chord.mp3" preload="auto"></audio>
-    <audio id="Asmaj" src="AudioFiles/a-sharp-major-chord.mp3" preload="auto"></audio>
-    <audio id="Bmaj" src="AudioFiles/b-major-chord.mp3" preload="auto"></audio>
+    <audio id="Cmaj" src="MajorChords/c-major-chord.mp3" preload="auto"></audio>
+    <audio id="Csmaj" src="MajorChords/c-sharp-major-chord.mp3" preload="auto"></audio>
+    <audio id="Dmaj" src="MajorChords/d-major-chord.mp3" preload="auto"></audio>
+    <audio id="Dsmaj" src="MajorChords/d-sharp-major-chord.mp3" preload="auto"></audio>
+    <audio id="Emaj" src="MajorChords/e-major-chord.mp3" preload="auto"></audio>
+    <audio id="Fmaj" src="MajorChords/f-major-chord.mp3" preload="auto"></audio>
+    <audio id="Fsmaj" src="MajorChords/f-sharp-major-chord.mp3" preload="auto"></audio>
+    <audio id="Gmaj" src="MajorChords/g-major-chord.mp3" preload="auto"></audio>
+    <audio id="Gsmaj" src="MajorChords/g-sharp-major-chord.mp3" preload="auto"></audio>
+    <audio id="Amaj" src="MajorChords/a-major-chord.mp3" preload="auto"></audio>
+    <audio id="Asmaj" src="MajorChords/a-sharp-major-chord.mp3" preload="auto"></audio>
+    <audio id="Bmaj" src="MajorChords/b-major-chord.mp3" preload="auto"></audio>
     <!----------------------------------------------------------->
 
     <!-- Minor Chords Section ----------------------------------->
-    <audio id="Cmin" src="Cmin.mp3" preload="auto"></audio>
-    <audio id="Csmin" src="Csmin.mp3" preload="auto"></audio>
-    <audio id="Dmin" src="Dmin.mp3" preload="auto"></audio>
-    <audio id="Dsmin" src="Dsmin.mp3" preload="auto"></audio>
-    <audio id="Emin" src="Emin.mp3" preload="auto"></audio>
-    <audio id="Fmin" src="Fmin.mp3" preload="auto"></audio>
-    <audio id="Fsmin" src="Fsmin.mp3" preload="auto"></audio>
-    <audio id="Gmin" src="Gmin.mp3" preload="auto"></audio>
-    <audio id="Gsmin" src="Gsmin.mp3" preload="auto"></audio>
-    <audio id="Amin" src="Amin.mp3" preload="auto"></audio>
-    <audio id="Asmin" src="Asmin.mp3" preload="auto"></audio>
-    <audio id="Bmin" src="Bmin.mp3" preload="auto"></audio>
+    <audio id="Cmin" src="MinorChords/c-minor-chord.mp3" preload="auto"></audio>
+    <audio id="Csmin" src="MinorChords/c-sharp-minor-chord.mp3" preload="auto"></audio>
+    <audio id="Dmin" src="MinorChords/d-minor-chord.mp3" preload="auto"></audio>
+    <audio id="Dsmin" src="MinorChords/d-sharp-minor-chord.mp3" preload="auto"></audio>
+    <audio id="Emin" src="MinorChords/e-minor-chord.mp3" preload="auto"></audio>
+    <audio id="Fmin" src="MinorChords/f-minor-chord.mp3" preload="auto"></audio>
+    <audio id="Fsmin" src="MinorChords/f-sharp-minor-chord.mp3" preload="auto"></audio>
+    <audio id="Gmin" src="MinorChords/g-minor-chord.mp3" preload="auto"></audio>
+    <audio id="Gsmin" src="MinorChords/g-sharp-minor-chord.mp3" preload="auto"></audio>
+    <audio id="Amin" src="MinorChords/a-minor-chord.mp3" preload="auto"></audio>
+    <audio id="Asmin" src="MinorChords/a-sharp-minor-chord.mp3" preload="auto"></audio>
+    <audio id="Bmin" src="MinorChords/b-minor-chord.mp3" preload="auto"></audio>
     <!----------------------------------------------------------->
 
-    <button onclick="playA440()">Play A440</button>
+    <button onclick="document.getElementById('Cmin').play()">Play Audio File</button>
+    <button onclick="document.getElementById('Csmin').play()">Play Audio File</button>
+    <button onclick="document.getElementById('Dmin').play()">Play Audio File</button>
+    <button onclick="document.getElementById('Dsmin').play()">Play Audio File</button>
+    <button onclick="document.getElementById('Emin').play()">Play Audio File</button>
+    <button onclick="document.getElementById('Fmin').play()">Play Audio File</button>
+    <button onclick="document.getElementById('Fsmin').play()">Play Audio File</button>
+    <button onclick="document.getElementById('Gmin').play()">Play Audio File</button>
+    <button onclick="document.getElementById('Gsmin').play()">Play Audio File</button>
+    <button onclick="document.getElementById('Amin').play()">Play Audio File</button>
+    <button onclick="document.getElementById('Asmin').play()">Play Audio File</button>
+    <button onclick="document.getElementById('Bmin').play()">Play Audio File</button>
 
-    <!-- <audio id="audioFile" src="Cmaj.mp3" preload="auto"></audio> -->
-    <button onclick="document.getElementById('Cmaj').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Csmaj').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Dmaj').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Dsmaj').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Emaj').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Fmaj').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Fsmaj').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Gmaj').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Gsmaj').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Amaj').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Asmaj').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Bmaj').play()">Play Audio File</button>
-    <button onclick="playRandomMajor()">Random</button>
+
+
+    <button onclick="playRandomMajor()">Major</button>
+    <button onclick="playRandomMinor()">Minor</button>
+    <button onclick="playRandomChord()">Random</button>
+
+
 
 </body>
 <script src="chord.js"></script>
