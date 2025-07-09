@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Chord Guesser</title>
   <link rel="stylesheet" href="chord.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 </head>
 <body>
     <!-- Major Chords Section ---------------------------------->
@@ -36,18 +37,22 @@
     <audio id="Bmin" src="MinorChords/b-minor-chord.mp3" preload="auto"></audio>
     <!----------------------------------------------------------->
 
-    <button onclick="document.getElementById('Cmin').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Csmin').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Dmin').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Dsmin').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Emin').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Fmin').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Fsmin').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Gmin').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Gsmin').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Amin').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Asmin').play()">Play Audio File</button>
-    <button onclick="document.getElementById('Bmin').play()">Play Audio File</button>
+
+    <h1>Chord Guesser</h1>
+
+
+    <button onclick="document.getElementById('Cmin').play()">C</button>
+    <button onclick="document.getElementById('Csmin').play()">C#</button>
+    <button onclick="document.getElementById('Dmin').play()">D</button>
+    <button onclick="document.getElementById('Dsmin').play()">D#</button>
+    <button onclick="document.getElementById('Emin').play()">E</button>
+    <button onclick="document.getElementById('Fmin').play()">F</button>
+    <button onclick="document.getElementById('Fsmin').play()">F#</button>
+    <button onclick="document.getElementById('Gmin').play()">G</button>
+    <button onclick="document.getElementById('Gsmin').play()">G#</button>
+    <button onclick="document.getElementById('Amin').play()">A</button>
+    <button onclick="document.getElementById('Asmin').play()">A#</button>
+    <button onclick="document.getElementById('Bmin').play()">B</button>
 
 
 
@@ -55,6 +60,19 @@
     <button onclick="playRandomMinor()">Minor</button>
     <button onclick="playRandomChord()">Random</button>
 
+    <h3>What chord is playing?</h3>
+    
+    <form>
+      <div class="search">
+        <span class="search-icon material-symbols-outlined">search</span>
+        <input id="search-input" class="search-input" type="search" placeholder="Search">
+      </div>
+    </form>
+    <div id="output"></div>
+    <input type="text" placeholder="E#majb3">
+    <!-- ui for chord guess, make it a search bar with a dropdown menu that 
+         continuously updates possible results based on user input
+         could create a subarray of all possible options from user input and only traverse that each time -->
 
 
 </body>
