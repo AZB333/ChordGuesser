@@ -86,19 +86,27 @@ userInput = document.getElementById("search-input");
 output = document.getElementById("output");
 resultList = document.getElementById("result-list");
 
+// testButton = document.getElementById("test"); //hiding an element
+// testButton.addEventListener("click", () =>{
+//     resultList.style.display='none';
+// })
+
 userInput.addEventListener("input", () => {
 
     output.textContent = '';
     resultList.innerHTML = '';
 
     for(i = 0; i < allchords.length; i++){
-        lowerAllChords = allchords[i].name.toLowerCase();
+        lowerAllChords = allchords[i].name.toLowerCase(); //set to lowercase
         lowerInput = userInput.value.toLowerCase();
         if(lowerAllChords.includes(lowerInput)){
-            output.textContent += allchords[i].name;
+            // output.textContent += allchords[i].name; //debug
             let result = document.createElement("li");
             result.textContent = allchords[i].name;
             result.classList.add("result")
+            result.addEventListener("click", () => {
+                result.style.display = 'none';
+            })
             resultList.appendChild(result);
         }
     }

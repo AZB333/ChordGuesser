@@ -55,7 +55,7 @@
     <h1>Chord Guesser</h1>
 
 
-    <button onclick="document.getElementById('Cmaj7').play()">C</button>
+    <!-- <button onclick="document.getElementById('Cmaj7').play()">C</button>
     <button onclick="document.getElementById('Csmaj7').play()">C#</button>
     <button onclick="document.getElementById('Dmaj7').play()">D</button>
     <button onclick="document.getElementById('Dsmaj7').play()">D#</button>
@@ -66,7 +66,7 @@
     <button onclick="document.getElementById('Gsmaj7').play()">G#</button>
     <button onclick="document.getElementById('Amaj7').play()">A</button>
     <button onclick="document.getElementById('Asmaj7').play()">A#</button>
-    <button onclick="document.getElementById('Bmaj7').play()">B</button>
+    <button onclick="document.getElementById('Bmaj7').play()">B</button> -->
 
 
 
@@ -77,19 +77,16 @@
 
     <h3>What chord is playing?</h3>
     
-    <form>
-      <div class="search">
-        <input id="search-input" class="search-input" type="search" placeholder="E#majb3">
-      </div>
-    </form>
+    <div class="search">
+      <input id="search-input" class="search-input" type="search" placeholder="E#majb3">
+    </div>
+
     <div id="output"></div>
-    <ul id="result-list">
-      
-    </ul>
-    
-    <!-- ui for chord guess, make it a search bar with a dropdown menu that 
-         continuously updates possible results based on user input
-         could create a subarray of all possible options from user input and only traverse that each time -->
+
+    <!-- <button id="test">test</button> -->
+      <ul class="result-list" id="result-list">
+        <!-- this is where possible search results appear -->
+      </ul>
 
 
 </body>

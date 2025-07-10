@@ -1,13 +1,24 @@
 *{
-    background: #344b69;
+    /* variables */
+    --seashell: #FEF5EF;
+    --sand: #E4BB97;
+    --rose: #9D5C63;
+    --wenge: #584B53;
+    --light-blue: #D6E3F8;
+
+    background: var(--sand);
+    text-align: center;
+    
 }
+
 
 button {
     font-size: 1.5rem;
     padding: 1rem 2rem;
-    background-color: #541457;
+    margin: 2px;
+    background-color: var(--rose);
     color: white;
-    border: none;
+    border: 1px solid black;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.2s;
@@ -17,24 +28,47 @@ button:hover {
     background-color: #622d66;
 }
 
+.result{
+    color: #900f0f;
+    border: 1px solid black;
+    padding: 2% 0px;
+    width: 100%;
+    list-style: none;
+    border-radius: 15px;
+    margin-bottom:.5px;
+}
+
+.result:hover{
+    cursor: pointer;
+}
+
+
+.result-list{
+    margin: 20px auto;
+    text-align: center;
+    padding: 0;
+    width: 50%;
+}
+
 .search{
+    margin: 20px auto;
     width: max-content;
-    display: flex;
-    align-items: center;
     padding: 14px;
     border-radius: 28px;
     background: #F6F6F6;
     border: 1px solid rgba(0,0,0,.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 .search-input{
     font-size: 16px;
-    font-family: 'Lexend' sans-serif;
     color: #333333;
-    margin-left: 14px;
     outline: none;
     border: none;
     background: transparent;
-    width: 300px;
 
 }
