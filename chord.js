@@ -72,6 +72,10 @@ function playRandomMajorSeventh(){
 }
 
 const chords=[majors, minors, majorSevenths];
+let allchords = [];
+for(i = 0; i < chords.length; i++){
+    allchords = allchords.concat(chords[i]);
+}
 
 function playRandomChord(){
     chords[Math.floor(Math.random()* chords.length)][Math.floor(Math.random() * 11)].audio.play();
@@ -80,13 +84,27 @@ function playRandomChord(){
 
 userInput = document.getElementById("search-input");
 output = document.getElementById("output");
+resultList = document.getElementById("result-list");
 
 userInput.addEventListener("input", () => {
-    let allchords = [];
-    for(i = 0; i < chords.length; i++){
-        allchords = allchords.concat(chords[i]);
-    }
+
+    output.textContent = '';
+    resultList.innerHTML = '';
+
     for(i = 0; i < allchords.length; i++){
-        output.textContent += allchords[i].name;
+        lowerAllChords = allchords[i].name.toLowerCase();
+        lowerInput = userInput.value.toLowerCase();
+        if(lowerAllChords.includes(lowerInput)){
+            output.textContent += allchords[i].name;
+            let result = document.createElement("li");
+            result.textContent = allchords[i].name;
+            result.classList.add("result")
+            resultList.appendChild(result);
+        }
+    }
+
+    if(userInput.value == ''){
+        output.textContent = '';
+        resultList.innerHTML = '';
     }
 })

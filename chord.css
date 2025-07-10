@@ -1,3 +1,7 @@
+*{
+    background: #344b69;
+}
+
 button {
     font-size: 1.5rem;
     padding: 1rem 2rem;
@@ -33,9 +37,4 @@ button:hover {
     background: transparent;
     width: 300px;
 
-}
-
-.search-input::placeholder,
-.search-icon{
-    color: rgba(0,0,0,.5);
 }
