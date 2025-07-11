@@ -59,16 +59,50 @@ const Bmaj7 = new Chord("Bmaj7", document.getElementById('Bmaj7'));
 const majorSevenths = [Cmaj7, Csmaj7, Dmaj7, Dsmaj7, Emaj7, Fmaj7, Fsmaj7, Gmaj7, Gsmaj7, Amaj7, Asmaj7, Bmaj7];
 
 
+let userInput = document.getElementById("search-input");
+let output = document.getElementById("output");
+let resultList = document.getElementById("result-list");
+
+////////////////////the function///////////////////////
+
 function playRandomMajor(){
-    majors[Math.floor(Math.random() * 11)].audio.play();
+    let randomMajor = majors[Math.floor(Math.random() * 11)];
+    randomMajor.audio.play();
+    return randomMajor;
 }
 
 function playRandomMinor(){
-    minors[Math.floor(Math.random() * 11)].audio.play();
+    let randomMinor = minors[Math.floor(Math.random() * 11)];
+    randomMinor.audio.play();
+    return randomMinor;
 }
 
 function playRandomMajorSeventh(){
-    majorSevenths[Math.floor(Math.random() * 11)].audio.play();
+    let randomMajorSeventh = majorSevenths[Math.floor(Math.random() * 11)];
+    randomMajorSeventh.audio.play();
+    return randomMajorSeventh;
+}
+
+function guessCheck(){
+
+}
+
+function playRandom(chord){
+    if(chord == 'major'){
+        let randomMajor = playRandomMajor();
+        output.textContent = randomMajor.name;
+        console.log(randomMajor.name);
+    }
+    else if(chord == 'minor'){
+        let randomMinor = playRandomMinor();
+        output.textContent = randomMinor.name;
+        console.log(randomMinor.name);
+    }
+    else if(chord == 'major-seventh'){
+        let randomMajorSeventh = playRandomMajorSeventh();
+        output.textContent = randomMajorSeventh.name;
+        console.log(randomMajorSeventh.name);
+    }
 }
 
 const chords=[majors, minors, majorSevenths];
@@ -82,9 +116,7 @@ function playRandomChord(){
 }
 
 
-userInput = document.getElementById("search-input");
-output = document.getElementById("output");
-resultList = document.getElementById("result-list");
+
 
 // testButton = document.getElementById("test"); //hiding an element
 // testButton.addEventListener("click", () =>{
