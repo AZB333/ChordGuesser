@@ -62,6 +62,7 @@ const majorSevenths = [Cmaj7, Csmaj7, Dmaj7, Dsmaj7, Emaj7, Fmaj7, Fsmaj7, Gmaj7
 let userInput = document.getElementById("search-input");
 let output = document.getElementById("output");
 let resultList = document.getElementById("result-list");
+let correct = '';
 
 ////////////////////the function///////////////////////
 
@@ -83,6 +84,12 @@ function playRandomMajorSeventh(){
     return randomMajorSeventh;
 }
 
+function playRandomChord(){
+    let randomChord = chords[Math.floor(Math.random()* chords.length)][Math.floor(Math.random() * 11)]
+    randomChord.audio.play();
+    return randomChord;
+}
+
 function guessCheck(){
 
 }
@@ -90,18 +97,27 @@ function guessCheck(){
 function playRandom(chord){
     if(chord == 'major'){
         let randomMajor = playRandomMajor();
+        correct = randomMajor;
         output.textContent = randomMajor.name;
         console.log(randomMajor.name);
     }
     else if(chord == 'minor'){
         let randomMinor = playRandomMinor();
+        correct = randomMinor;
         output.textContent = randomMinor.name;
         console.log(randomMinor.name);
     }
     else if(chord == 'major-seventh'){
         let randomMajorSeventh = playRandomMajorSeventh();
+        correct = randomMajorSeventh;
         output.textContent = randomMajorSeventh.name;
         console.log(randomMajorSeventh.name);
+    }
+    else if(chord == 'random'){
+        let randomChord = playRandomChord();
+        correct = randomChord;
+        output.textContent = randomChord.name;
+        console.log(randomChord.name);
     }
 }
 
@@ -111,9 +127,6 @@ for(i = 0; i < chords.length; i++){
     allchords = allchords.concat(chords[i]);
 }
 
-function playRandomChord(){
-    chords[Math.floor(Math.random()* chords.length)][Math.floor(Math.random() * 11)].audio.play();
-}
 
 
 
@@ -137,7 +150,17 @@ userInput.addEventListener("input", () => {
             result.textContent = allchords[i].name;
             result.classList.add("result")
             result.addEventListener("click", () => {
-                result.style.display = 'none';
+                // result.style.display = 'none';
+                lowerCorrect = correct.name.toLowerCase(); //set to lowercase
+                console.log(lowerCorrect, lowerInput);
+                if(lowerInput == lowerCorrect){
+                    output.textContent = "By Odin's Beard, you've done it!"; //you A # lad 
+                    console.log("correct");
+                }
+                else{
+                    output.textContent = "Nice try dipshit";
+                    console.log("incorrect");
+                }
             })
             resultList.appendChild(result);
         }
