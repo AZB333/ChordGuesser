@@ -35,6 +35,15 @@ button.disabled{
   
 }
 
+
+nav li{
+  display: inline;
+}
+
+nav ul{
+  list-style: none;
+}
+
 .title{
     font-size: 3vw;
 }
