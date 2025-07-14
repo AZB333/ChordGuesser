@@ -126,21 +126,6 @@
     </div>
 
 
-    <!-- <button onclick="document.getElementById('Cmaj7').play()">C</button>
-    <button onclick="document.getElementById('Csmaj7').play()">C#</button>
-    <button onclick="document.getElementById('Dmaj7').play()">D</button>
-    <button onclick="document.getElementById('Dsmaj7').play()">D#</button>
-    <button onclick="document.getElementById('Emaj7').play()">E</button>
-    <button onclick="document.getElementById('Fmaj7').play()">F</button>
-    <button onclick="document.getElementById('Fsmaj7').play()">F#</button>
-    <button onclick="document.getElementById('Gmaj7').play()">G</button>
-    <button onclick="document.getElementById('Gsmaj7').play()">G#</button>
-    <button onclick="document.getElementById('Amaj7').play()">A</button>
-    <button onclick="document.getElementById('Asmaj7').play()">A#</button>
-    <button onclick="document.getElementById('Bmaj7').play()">B</button> -->
-
-
-
     <button id="major" onclick="playRandom('major')">Major</button>
     <button id="minor" onclick="playRandom('minor')">Minor</button>
     <button id="major-seventh" onclick="playRandom('major-seventh')">Major Seventh</button>
@@ -148,6 +133,9 @@
 
     <h3>What chord is playing?</h3>
     
+    <button id="replay-button" class="disabled" onclick="replay()">Replay</button>
+    <button id="refresh-button" class="disabled" onclick="refresh()">Give Up</button>
+
     <div class="search">
       <input id="search-input" class="search-input" type="search" placeholder="E#majb3">
     </div>

@@ -3,6 +3,7 @@
     --seashell: #FEF5EF;
     --sand: #E4BB97;
     --rose: #9D5C63;
+    --dark-rose: #4e2c30;
     --wenge: #584B53;
     --light-blue: #D6E3F8;
 
@@ -26,6 +27,12 @@ button {
 
 button:hover {
     background-color: #622d66;
+}
+
+button.disabled{
+  background-color: var(--dark-rose);
+  cursor: not-allowed;
+  
 }
 
 .title{

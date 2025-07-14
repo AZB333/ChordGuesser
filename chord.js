@@ -63,6 +63,8 @@ const majorSevenths = [Cmaj7, Csmaj7, Dmaj7, Dsmaj7, Emaj7, Fmaj7, Fsmaj7, Gmaj7
 ////////////////////vars/////////////////////////////
 const winCountSpan = document.getElementById("correct-guesses");
 const loseCountSpan = document.getElementById("incorrect-guesses");
+const replayButton = document.getElementById("replay-button");
+const refreshButton = document.getElementById("refresh-button");
 let userInput = document.getElementById("search-input");
 let output = document.getElementById("output");
 let resultList = document.getElementById("result-list");
@@ -111,6 +113,8 @@ function playRandomChord(){
 function refresh(){
     userInput.value = '';
     resultList.innerHTML = '';
+    correct = '';
+    disabledCheck();
 }
 
 function playRandom(chord){
@@ -138,6 +142,7 @@ function playRandom(chord){
         output.textContent = randomChord.name;
         console.log(randomChord.name);
     }
+    disabledCheck();
 }
 
 function updateScore(result){ 
@@ -152,8 +157,28 @@ function updateScore(result){
     refresh();
 }
 
+function disabledCheck(){
+    if(correct == ''){
+        replayButton.classList.add("disabled");
+        replayButton.disabled = true;
+        refreshButton.classList.add("disabled");
+        refreshButton.disabled = true;
+        console.log("disabled");
+    }
+    else{
+        replayButton.classList.remove("disabled");
+        replayButton.disabled = false;
+        refreshButton.classList.remove("disabled");
+        refreshButton.disabled = false;
+        correct.audio.play();
+        console.log("enabled");
+    }
+}
 
 
+
+
+////////////search logic/////////////
 userInput.addEventListener("input", () => {
 
     output.textContent = '';
@@ -170,15 +195,21 @@ userInput.addEventListener("input", () => {
             result.addEventListener("click", () => {
 
                 console.log(correct.name, result.textContent);
-                if(result.textContent == correct.name){
-                    output.textContent = "By Odin's Beard, you've done it!"; //you A # lad 
-                    console.log("correct");
-                    updateScore("win");
+                if(correct != ''){
+                    if(result.textContent == correct.name){
+                        output.textContent = "By Odin's Beard, you've done it!"; //you A # lad 
+                        console.log("correct");
+                        updateScore("win");
+                    }
+                    else{
+                        output.textContent = "Try again next time!";
+                        console.log("incorrect");
+                        updateScore("loss");
+                    }
                 }
                 else{
-                    output.textContent = "Try again next time!";
-                    console.log("incorrect");
-                    updateScore("loss");
+                    output.textContent = "Try to play a chord first!";
+                    refresh();
                 }
             })
             resultList.appendChild(result);
