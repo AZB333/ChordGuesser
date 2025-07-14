@@ -65,6 +65,10 @@ const winCountSpan = document.getElementById("correct-guesses");
 const loseCountSpan = document.getElementById("incorrect-guesses");
 const replayButton = document.getElementById("replay-button");
 const refreshButton = document.getElementById("refresh-button");
+const majorButton = document.getElementById("major-button");
+const minorButton = document.getElementById("minor-button");
+const majorSeventhButton = document.getElementById("major-seventh-button");
+const randomChordButton = document.getElementById("random-chord-button");
 let userInput = document.getElementById("search-input");
 let output = document.getElementById("output");
 let resultList = document.getElementById("result-list");
@@ -114,7 +118,8 @@ function refresh(){
     userInput.value = '';
     resultList.innerHTML = '';
     correct = '';
-    disabledCheck();
+    disableReplayRefresh();
+    disableChords();
 }
 
 function playRandom(chord){
@@ -142,7 +147,8 @@ function playRandom(chord){
         output.textContent = randomChord.name;
         console.log(randomChord.name);
     }
-    disabledCheck();
+    disableReplayRefresh();
+    disableChords();
 }
 
 function updateScore(result){ 
@@ -157,7 +163,7 @@ function updateScore(result){
     refresh();
 }
 
-function disabledCheck(){
+function disableReplayRefresh(){
     if(correct == ''){
         replayButton.classList.add("disabled");
         replayButton.disabled = true;
@@ -172,6 +178,21 @@ function disabledCheck(){
         refreshButton.disabled = false;
         correct.audio.play();
         console.log("enabled");
+    }
+}
+
+function disableChords(){
+    if(correct == ''){
+        majorButton.classList.remove("disabled");
+        minorButton.classList.remove("disabled");
+        majorSeventhButton.classList.remove("disabled");
+        randomChordButton.classList.remove("disabled");
+    }
+    else{
+        majorButton.classList.add("disabled");
+        minorButton.classList.add("disabled");
+        majorSeventhButton.classList.add("disabled");
+        randomChordButton.classList.add("disabled");
     }
 }
 
