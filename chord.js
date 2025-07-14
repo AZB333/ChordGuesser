@@ -77,6 +77,13 @@ for(i = 0; i < chords.length; i++){
 
 ////////////////////the function///////////////////////
 
+
+function playNote(audioFile) { //for individual notes, so they can repeat before audio ends
+    const note = new Audio(audioFile);
+    note.currentTime = 0;
+    note.play();
+}
+
 function playRandomMajor(){
     let randomMajor = majors[Math.floor(Math.random() * 11)];
     randomMajor.audio.play();

@@ -6,6 +6,12 @@
   <link rel="stylesheet" href="chord.css">
 </head>
 <body>
+
+
+
+    <!-- Individual Notes Section -->
+    <audio id="C3" src="IndividualNotes/C3.wav" preload="auto"></audio>
+
     <!-- Major Chords Section ---------------------------------->
     <audio id="Cmaj" src="MajorChords/c-major-chord.mp3" preload="auto"></audio>
     <audio id="Csmaj" src="MajorChords/c-sharp-major-chord.mp3" preload="auto"></audio>
@@ -52,7 +58,66 @@
     <!----------------------------------------------------------->
 
 
-    <h1>Chord Guesser</h1>
+    <h1 class="title">Chord Guesser</h1>
+
+
+    <!-- piano Ds3, E3, F3 need to be louder-->
+    <div class="piano-div">
+      <ul class="piano piano-ul">
+      <li class="key">
+      <span onclick="playNote('IndividualNotes/C3.wav')" class="white-key" id="C3-key" ></span>
+      <span onclick="playNote('IndividualNotes/Cs3.wav')" class="black-key" id="Cs3-key" ></span>
+      </li>
+      <li class="key">
+      <span onclick="playNote('IndividualNotes/D3.wav')" class="white-key" id="D3-key" ></span>
+      <span onclick="playNote('IndividualNotes/Ds3.wav')" class="black-key" id="Ds3-key" ></span> 
+      </li>
+      <li class="key">
+      <span onclick="playNote('IndividualNotes/E3.wav')" class="white-key" id="E3-key" ></span>
+      </li>
+      <li class="key">
+      <span onclick="playNote('IndividualNotes/F3.wav')" class="white-key" id="F3-key" ></span>
+      <span onclick="playNote('IndividualNotes/Fs3.wav')" class="black-key" id="Fs3-key" ></span>
+      </li>
+      <li class="key">
+      <span onclick="playNote('IndividualNotes/G3.wav')" class="white-key" id="G3-key" ></span>
+      <span onclick="playNote('IndividualNotes/Gs3.wav')" class="black-key" id="Gs3-key" ></span>
+      </li>
+      <li class="key">
+      <span onclick="playNote('IndividualNotes/A3.wav')" class="white-key" id="A3-key" ></span>
+      <span onclick="playNote('IndividualNotes/As3.wav')" class="black-key" id="As3-key" ></span>
+      </li>
+      <li class="key">
+      <span onclick="playNote('IndividualNotes/B3.wav')" class="white-key" id="B3-key" ></span>
+      </li>
+      <li class="key">
+      <span onclick="playNote('IndividualNotes/C4.wav')" class="white-key" id="C4-key" ></span>
+      <span onclick="playNote('IndividualNotes/Cs4.wav')" class="black-key" id="Cs4-key" ></span>
+      </li>
+      <li class="key">
+      <span onclick="playNote('IndividualNotes/D4.wav')" class="white-key" id="D4-key" ></span>
+      <span onclick="playNote('IndividualNotes/Ds4.wav')" class="black-key" id="Ds4-key" ></span>
+      </li>
+      <li class="key">
+      <span onclick="playNote('IndividualNotes/E4.wav')" class="white-key" id="E4-key" ></span>
+      </li>
+      <li class="key">
+      <span onclick="playNote('IndividualNotes/F4.wav')" class="white-key" id="F4-key"  ></span>
+      <span onclick="playNote('IndividualNotes/Fs4.wav')" class="black-key" id="Fs4-key" ></span>
+      </li>
+      <li class="key">
+      <span onclick="playNote('IndividualNotes/G4.wav')" class="white-key" id="G4-key" ></span>
+      <span onclick="playNote('IndividualNotes/Gs4.wav')" class="black-key" id="Gs4-key"  ></span>
+      </li>
+      <li class="key">
+      <span onclick="playNote('IndividualNotes/A4.wav')" class="white-key" id="A4-key" ></span>
+      <span onclick="playNote('IndividualNotes/As4.wav')" class="black-key" id="As4-key" ></span>
+      </li>
+      <li class="key">
+      <span onclick="playNote('IndividualNotes/B4.wav')" class="white-key" id="B4-key"></span>
+      </li>
+      </ul>
+    </div>
 
     <div id="score-box" class="score-box"> <!-- score counter -->
       <p id="score-box-title">Guesses</p>
