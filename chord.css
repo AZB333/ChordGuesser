@@ -70,6 +70,14 @@ nav ul{
     width: 50%;
 }
 
+.score-box{
+  margin: 1%;
+}
+
+.score-box p{
+  margin: 3px;
+}
+
 .search{
     margin: 20px auto;
     width: max-content;
@@ -98,36 +106,6 @@ nav ul{
 * @LFeh / luizfelipe.tf.13@gmail.com
 * http://www.felipefialho.com/
 */
-img {
-  max-width: 80%;
-  height: auto;
-  vertical-align: middle;
-  border: 0;
-  -ms-interpolation-mode: bicubic;
-}
-@font-face {
-  font-family: 'piano-keyboard';
-  src: url('icons/piano-keyboard.eot?nfc6q9');
-  src: url('icons/piano-keyboard.eot?#iefixnfc6q9') format('embedded-opentype'), url('icons/piano-keyboard.woff?nfc6q9') format('woff'), url('icons/piano-keyboard.ttf?nfc6q9') format('truetype'), url('icons/piano-keyboard.svg?nfc6q9#piano-keyboard') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-[class^="icon-"],
-[class*=" icon-"] {
-  font-family: 'piano-keyboard';
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.hidden {
-  visibility: hidden;
-}
 .wrap {
   position: relative;
 }
@@ -137,10 +115,10 @@ img {
 }
 
 .piano-div{
-    display: flex;
-    justify-content: center;
-    /* width: 80vw; */
-    /* height: 20vh; */
+  display: flex;
+  justify-content: center;
+  /* max-height: 35vh; */
+  width: 100%;
 }
 
 .piano {
@@ -150,15 +128,17 @@ img {
   background: linear-gradient(-65deg, #000000, #222222, #000000, #666666, #222222 75%);
   border-top: 2px solid #111;
   box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.5), inset 0 -4px 5px #000000;
-  padding: 0 1% 3%;
+  padding: 0 0% 3%;
   text-align: center;
+  width: 70vw;
 }
 .key {
   display: inline-block;
   position: relative;
   margin: 0 .5px;
   width: 6%;
-  max-width: 85px;
+  /* max-width: 85px; */
+  max-width: 5%;
   cursor: pointer;
 }
 .key:active .black-key,
@@ -172,14 +152,16 @@ img {
   background: linear-gradient(-30deg, #f8f8f8, #ffffff);
   box-shadow: inset 0 1px 0px #ffffff, inset 0 -1px 0px #ffffff, inset 1px 0px 0px #ffffff, inset -1px 0px 0px #ffffff, 0 4px 3px rgba(0, 0, 0, 0.7), inset 0 -1px 0px #ffffff, inset 1px 0px 0px #ffffff, inset -1px -1px 15px rgba(0, 0, 0, 0.5), -3px 4px 6px rgba(0, 0, 0, 0.5);
   display: block;
-  height: 300px;
+  /* height: 300px; */
+  height: 25vh;
 }
 .key .white-key:active,
 .key .white-key.active {
   box-shadow: inset 0 1px 0px #ffffff, inset 0 -1px 0px #ffffff, inset 1px 0px 0px #ffffff, inset -1px 0px 0px #ffffff, 0 4px 3px rgba(0, 0, 0, 0.7), inset 0 -1px 0px #ffffff, inset 1px 0px 0px #ffffff, inset -1px -1px 15px #000000, -3px 4px 6px rgba(0, 0, 0, 0.5);
   position: relative;
   top: -5px;
-  height: 295px;
+  /* height: 295px; */
+  height: 24.3vh;
 }
 .key .black-key {
   content: "";
@@ -191,10 +173,11 @@ img {
   border-width: 1px 3px 8px;
   border-style: solid;
   border-color: #666 #222 #111 #555;
-  height: 160px;
+  /* height: 160px; */
+  height: 13vh;
   position: absolute;
   top: 0px;
-  right: -40%;
+  right: -50%;
   width: 70%;
   z-index: 10;
 }
