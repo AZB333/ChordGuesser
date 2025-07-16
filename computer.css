@@ -24,6 +24,7 @@ main{
     border-radius: 50%;
     background-color: crimson;
     margin-bottom: 4rem;
+    cursor: pointer;
 }
 
 .mic-toggle:after,
