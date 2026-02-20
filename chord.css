@@ -564,6 +564,52 @@ body {
   min-height: 1.5em;
 }
 
+/* Bottom Navigation */
+.bottom-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color);
+  animation: fadeIn 1s ease 1.3s both;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+}
+
+.nav-link:hover {
+  border-color: var(--accent-secondary);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
+}
+
+.nav-link.active {
+  background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+  border-color: var(--accent-secondary);
+  color: var(--bg-primary);
+  box-shadow: 0 4px 20px var(--glow-secondary);
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .piano {
