@@ -2,150 +2,197 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chord Guesser</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chord Guesser — Ear Training Game</title>
   <link rel="stylesheet" href="chord.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Audio Elements -->
+  <!-- Major Chords -->
+  <audio id="Cmaj" src="MajorChords/c-major-chord.mp3" preload="auto"></audio>
+  <audio id="Csmaj" src="MajorChords/c-sharp-major-chord.mp3" preload="auto"></audio>
+  <audio id="Dmaj" src="MajorChords/d-major-chord.mp3" preload="auto"></audio>
+  <audio id="Dsmaj" src="MajorChords/d-sharp-major-chord.mp3" preload="auto"></audio>
+  <audio id="Emaj" src="MajorChords/e-major-chord.mp3" preload="auto"></audio>
+  <audio id="Fmaj" src="MajorChords/f-major-chord.mp3" preload="auto"></audio>
+  <audio id="Fsmaj" src="MajorChords/f-sharp-major-chord.mp3" preload="auto"></audio>
+  <audio id="Gmaj" src="MajorChords/g-major-chord.mp3" preload="auto"></audio>
+  <audio id="Gsmaj" src="MajorChords/g-sharp-major-chord.mp3" preload="auto"></audio>
+  <audio id="Amaj" src="MajorChords/a-major-chord.mp3" preload="auto"></audio>
+  <audio id="Asmaj" src="MajorChords/a-sharp-major-chord.mp3" preload="auto"></audio>
+  <audio id="Bmaj" src="MajorChords/b-major-chord.mp3" preload="auto"></audio>
 
+  <!-- Minor Chords -->
+  <audio id="Cmin" src="MinorChords/c-minor-chord.mp3" preload="auto"></audio>
+  <audio id="Csmin" src="MinorChords/c-sharp-minor-chord.mp3" preload="auto"></audio>
+  <audio id="Dmin" src="MinorChords/d-minor-chord.mp3" preload="auto"></audio>
+  <audio id="Dsmin" src="MinorChords/d-sharp-minor-chord.mp3" preload="auto"></audio>
+  <audio id="Emin" src="MinorChords/e-minor-chord.mp3" preload="auto"></audio>
+  <audio id="Fmin" src="MinorChords/f-minor-chord.mp3" preload="auto"></audio>
+  <audio id="Fsmin" src="MinorChords/f-sharp-minor-chord.mp3" preload="auto"></audio>
+  <audio id="Gmin" src="MinorChords/g-minor-chord.mp3" preload="auto"></audio>
+  <audio id="Gsmin" src="MinorChords/g-sharp-minor-chord.mp3" preload="auto"></audio>
+  <audio id="Amin" src="MinorChords/a-minor-chord.mp3" preload="auto"></audio>
+  <audio id="Asmin" src="MinorChords/a-sharp-minor-chord.mp3" preload="auto"></audio>
+  <audio id="Bmin" src="MinorChords/b-minor-chord.mp3" preload="auto"></audio>
 
+  <!-- Major Seventh Chords -->
+  <audio id="Cmaj7" src="MajorSeventhChords/c-major-seventh-chord.mp3" preload="auto"></audio>
+  <audio id="Csmaj7" src="MajorSeventhChords/c-sharp-major-seventh-chord.mp3" preload="auto"></audio>
+  <audio id="Dmaj7" src="MajorSeventhChords/d-major-seventh-chord.mp3" preload="auto"></audio>
+  <audio id="Dsmaj7" src="MajorSeventhChords/d-sharp-major-seventh-chord.mp3" preload="auto"></audio>
+  <audio id="Emaj7" src="MajorSeventhChords/e-major-seventh-chord.mp3" preload="auto"></audio>
+  <audio id="Fmaj7" src="MajorSeventhChords/f-major-seventh-chord.mp3" preload="auto"></audio>
+  <audio id="Fsmaj7" src="MajorSeventhChords/f-sharp-major-seventh-chord.mp3" preload="auto"></audio>
+  <audio id="Gmaj7" src="MajorSeventhChords/g-major-seventh-chord.mp3" preload="auto"></audio>
+  <audio id="Gsmaj7" src="MajorSeventhChords/g-sharp-major-seventh-chord.mp3" preload="auto"></audio>
+  <audio id="Amaj7" src="MajorSeventhChords/a-major-seventh-chord.mp3" preload="auto"></audio>
+  <audio id="Asmaj7" src="MajorSeventhChords/a-sharp-major-seventh-chord.mp3" preload="auto"></audio>
+  <audio id="Bmaj7" src="MajorSeventhChords/b-major-seventh-chord.mp3" preload="auto"></audio>
 
+  <!-- Background Graphics -->
+  <div class="bg-graphics">
+    <div class="wave-line"></div>
+    <div class="wave-line"></div>
+    <div class="wave-line"></div>
+  </div>
 
-    <!-- Major Chords Section ---------------------------------->
-    <audio id="Cmaj" src="MajorChords/c-major-chord.mp3" preload="auto"></audio>
-    <audio id="Csmaj" src="MajorChords/c-sharp-major-chord.mp3" preload="auto"></audio>
-    <audio id="Dmaj" src="MajorChords/d-major-chord.mp3" preload="auto"></audio>
-    <audio id="Dsmaj" src="MajorChords/d-sharp-major-chord.mp3" preload="auto"></audio>
-    <audio id="Emaj" src="MajorChords/e-major-chord.mp3" preload="auto"></audio>
-    <audio id="Fmaj" src="MajorChords/f-major-chord.mp3" preload="auto"></audio>
-    <audio id="Fsmaj" src="MajorChords/f-sharp-major-chord.mp3" preload="auto"></audio>
-    <audio id="Gmaj" src="MajorChords/g-major-chord.mp3" preload="auto"></audio>
-    <audio id="Gsmaj" src="MajorChords/g-sharp-major-chord.mp3" preload="auto"></audio>
-    <audio id="Amaj" src="MajorChords/a-major-chord.mp3" preload="auto"></audio>
-    <audio id="Asmaj" src="MajorChords/a-sharp-major-chord.mp3" preload="auto"></audio>
-    <audio id="Bmaj" src="MajorChords/b-major-chord.mp3" preload="auto"></audio>
-    <!----------------------------------------------------------->
+  <div class="container">
+    <!-- Header -->
+    <header class="game-header">
+      <h1 class="title">Chord Guesser</h1>
+      <p class="subtitle">Train your musical ear</p>
+    </header>
 
-    <!-- Minor Chords Section ----------------------------------->
-    <audio id="Cmin" src="MinorChords/c-minor-chord.mp3" preload="auto"></audio>
-    <audio id="Csmin" src="MinorChords/c-sharp-minor-chord.mp3" preload="auto"></audio>
-    <audio id="Dmin" src="MinorChords/d-minor-chord.mp3" preload="auto"></audio>
-    <audio id="Dsmin" src="MinorChords/d-sharp-minor-chord.mp3" preload="auto"></audio>
-    <audio id="Emin" src="MinorChords/e-minor-chord.mp3" preload="auto"></audio>
-    <audio id="Fmin" src="MinorChords/f-minor-chord.mp3" preload="auto"></audio>
-    <audio id="Fsmin" src="MinorChords/f-sharp-minor-chord.mp3" preload="auto"></audio>
-    <audio id="Gmin" src="MinorChords/g-minor-chord.mp3" preload="auto"></audio>
-    <audio id="Gsmin" src="MinorChords/g-sharp-minor-chord.mp3" preload="auto"></audio>
-    <audio id="Amin" src="MinorChords/a-minor-chord.mp3" preload="auto"></audio>
-    <audio id="Asmin" src="MinorChords/a-sharp-minor-chord.mp3" preload="auto"></audio>
-    <audio id="Bmin" src="MinorChords/b-minor-chord.mp3" preload="auto"></audio>
-    <!----------------------------------------------------------->
-
-    <!-- Major Seventh Chords Section ----------------------------------->
-    <audio id="Cmaj7" src="MajorSeventhChords/c-major-seventh-chord.mp3" preload="auto"></audio>
-    <audio id="Csmaj7" src="MajorSeventhChords/c-sharp-major-seventh-chord.mp3" preload="auto"></audio>
-    <audio id="Dmaj7" src="MajorSeventhChords/d-major-seventh-chord.mp3" preload="auto"></audio>
-    <audio id="Dsmaj7" src="MajorSeventhChords/d-sharp-major-seventh-chord.mp3" preload="auto"></audio>
-    <audio id="Emaj7" src="MajorSeventhChords/e-major-seventh-chord.mp3" preload="auto"></audio>
-    <audio id="Fmaj7" src="MajorSeventhChords/f-major-seventh-chord.mp3" preload="auto"></audio>
-    <audio id="Fsmaj7" src="MajorSeventhChords/f-sharp-major-seventh-chord.mp3" preload="auto"></audio>
-    <audio id="Gmaj7" src="MajorSeventhChords/g-major-seventh-chord.mp3" preload="auto"></audio>
-    <audio id="Gsmaj7" src="MajorSeventhChords/g-sharp-major-seventh-chord.mp3" preload="auto"></audio>
-    <audio id="Amaj7" src="MajorSeventhChords/a-major-seventh-chord.mp3" preload="auto"></audio>
-    <audio id="Asmaj7" src="MajorSeventhChords/a-sharp-major-seventh-chord.mp3" preload="auto"></audio>
-    <audio id="Bmaj7" src="MajorSeventhChords/b-major-seventh-chord.mp3" preload="auto"></audio>
-    <!----------------------------------------------------------->
-
-
-    <h1 class="title">Chord Guesser</h1>
-
-
-    <!-- -->
-    <div class="piano-div">
-      <ul class="piano piano-ul">
-      <li class="key">
-      <span onclick="playNote('IndividualNotes/C3.wav')" class="white-key" id="C3-key" ></span>
-      <span onclick="playNote('IndividualNotes/Cs3.wav')" class="black-key" id="Cs3-key" ></span>
-      </li>
-      <li class="key">
-      <span onclick="playNote('IndividualNotes/D3.wav')" class="white-key" id="D3-key" ></span>
-      <span onclick="playNote('IndividualNotes/Ds3.wav')" class="black-key" id="Ds3-key" ></span> 
-      </li>
-      <li class="key">
-      <span onclick="playNote('IndividualNotes/E3.wav')" class="white-key" id="E3-key" ></span>
-      </li>
-      <li class="key">
-      <span onclick="playNote('IndividualNotes/F3.wav')" class="white-key" id="F3-key" ></span>
-      <span onclick="playNote('IndividualNotes/Fs3.wav')" class="black-key" id="Fs3-key" ></span>
-      </li>
-      <li class="key">
-      <span onclick="playNote('IndividualNotes/G3.wav')" class="white-key" id="G3-key" ></span>
-      <span onclick="playNote('IndividualNotes/Gs3.wav')" class="black-key" id="Gs3-key" ></span>
-      </li>
-      <li class="key">
-      <span onclick="playNote('IndividualNotes/A3.wav')" class="white-key" id="A3-key" ></span>
-      <span onclick="playNote('IndividualNotes/As3.wav')" class="black-key" id="As3-key" ></span>
-      </li>
-      <li class="key">
-      <span onclick="playNote('IndividualNotes/B3.wav')" class="white-key" id="B3-key" ></span>
-      </li>
-      <li class="key">
-      <span onclick="playNote('IndividualNotes/C4.wav')" class="white-key" id="C4-key" ></span>
-      <span onclick="playNote('IndividualNotes/Cs4.wav')" class="black-key" id="Cs4-key" ></span>
-      </li>
-      <li class="key">
-      <span onclick="playNote('IndividualNotes/D4.wav')" class="white-key" id="D4-key" ></span>
-      <span onclick="playNote('IndividualNotes/Ds4.wav')" class="black-key" id="Ds4-key" ></span>
-      </li>
-      <li class="key">
-      <span onclick="playNote('IndividualNotes/E4.wav')" class="white-key" id="E4-key" ></span>
-      </li>
-      <li class="key">
-      <span onclick="playNote('IndividualNotes/F4.wav')" class="white-key" id="F4-key"  ></span>
-      <span onclick="playNote('IndividualNotes/Fs4.wav')" class="black-key" id="Fs4-key" ></span>
-      </li>
-      <li class="key">
-      <span onclick="playNote('IndividualNotes/G4.wav')" class="white-key" id="G4-key" ></span>
-      <span onclick="playNote('IndividualNotes/Gs4.wav')" class="black-key" id="Gs4-key"  ></span>
-      </li>
-      <li class="key">
-      <span onclick="playNote('IndividualNotes/A4.wav')" class="white-key" id="A4-key" ></span>
-      <span onclick="playNote('IndividualNotes/As4.wav')" class="black-key" id="As4-key" ></span>
-      </li>
-      <li class="key">
-      <span onclick="playNote('IndividualNotes/B4.wav')" class="white-key" id="B4-key"></span>
-      </li>
-      </ul>
+    <!-- Score Display -->
+    <div class="score-display">
+      <div class="score-item correct">
+        <span class="score-label">Correct</span>
+        <span class="score-value" id="correct-guesses">0</span>
+      </div>
+      <div class="score-divider"></div>
+      <div class="score-item incorrect">
+        <span class="score-label">Incorrect</span>
+        <span class="score-value" id="incorrect-guesses">0</span>
+      </div>
     </div>
 
-    <div id="score-box" class="score-box"> <!-- score counter -->
-      <p id="score-box-title">Guesses</p>
-      <p id="wins">Correct: <span id="correct-guesses">0</span></p>
-      <p id="loseses">Incorrect: <span id="incorrect-guesses">0</span></p>
+    <!-- Piano Keyboard -->
+    <div class="piano-container">
+      <div class="piano-wrapper">
+        <ul class="piano">
+          <li class="key">
+            <span onclick="playNote('IndividualNotes/C3.wav')" class="white-key" id="C3-key"></span>
+            <span onclick="playNote('IndividualNotes/Cs3.wav')" class="black-key" id="Cs3-key"></span>
+          </li>
+          <li class="key">
+            <span onclick="playNote('IndividualNotes/D3.wav')" class="white-key" id="D3-key"></span>
+            <span onclick="playNote('IndividualNotes/Ds3.wav')" class="black-key" id="Ds3-key"></span>
+          </li>
+          <li class="key">
+            <span onclick="playNote('IndividualNotes/E3.wav')" class="white-key" id="E3-key"></span>
+          </li>
+          <li class="key">
+            <span onclick="playNote('IndividualNotes/F3.wav')" class="white-key" id="F3-key"></span>
+            <span onclick="playNote('IndividualNotes/Fs3.wav')" class="black-key" id="Fs3-key"></span>
+          </li>
+          <li class="key">
+            <span onclick="playNote('IndividualNotes/G3.wav')" class="white-key" id="G3-key"></span>
+            <span onclick="playNote('IndividualNotes/Gs3.wav')" class="black-key" id="Gs3-key"></span>
+          </li>
+          <li class="key">
+            <span onclick="playNote('IndividualNotes/A3.wav')" class="white-key" id="A3-key"></span>
+            <span onclick="playNote('IndividualNotes/As3.wav')" class="black-key" id="As3-key"></span>
+          </li>
+          <li class="key">
+            <span onclick="playNote('IndividualNotes/B3.wav')" class="white-key" id="B3-key"></span>
+          </li>
+          <li class="key">
+            <span onclick="playNote('IndividualNotes/C4.wav')" class="white-key" id="C4-key"></span>
+            <span onclick="playNote('IndividualNotes/Cs4.wav')" class="black-key" id="Cs4-key"></span>
+          </li>
+          <li class="key">
+            <span onclick="playNote('IndividualNotes/D4.wav')" class="white-key" id="D4-key"></span>
+            <span onclick="playNote('IndividualNotes/Ds4.wav')" class="black-key" id="Ds4-key"></span>
+          </li>
+          <li class="key">
+            <span onclick="playNote('IndividualNotes/E4.wav')" class="white-key" id="E4-key"></span>
+          </li>
+          <li class="key">
+            <span onclick="playNote('IndividualNotes/F4.wav')" class="white-key" id="F4-key"></span>
+            <span onclick="playNote('IndividualNotes/Fs4.wav')" class="black-key" id="Fs4-key"></span>
+          </li>
+          <li class="key">
+            <span onclick="playNote('IndividualNotes/G4.wav')" class="white-key" id="G4-key"></span>
+            <span onclick="playNote('IndividualNotes/Gs4.wav')" class="black-key" id="Gs4-key"></span>
+          </li>
+          <li class="key">
+            <span onclick="playNote('IndividualNotes/A4.wav')" class="white-key" id="A4-key"></span>
+            <span onclick="playNote('IndividualNotes/As4.wav')" class="black-key" id="As4-key"></span>
+          </li>
+          <li class="key">
+            <span onclick="playNote('IndividualNotes/B4.wav')" class="white-key" id="B4-key"></span>
+          </li>
+        </ul>
+      </div>
     </div>
 
-
-    <button id="major-button" onclick="playRandom('major')">Major</button>
-    <button id="minor-button" onclick="playRandom('minor')">Minor</button>
-    <button id="major-seventh-button" onclick="playRandom('major-seventh')">Major Seventh</button>
-    <button id="random-chord-button" onclick="playRandom('random')">Random</button>
-
-    <h3>What chord is playing?</h3>
-    
-    <button id="replay-button" class="disabled" onclick="disableReplayRefresh()">Replay</button>
-    <button id="refresh-button" class="disabled" onclick="refresh()">Give Up</button>
-
-    <div class="search">
-      <input id="search-input" class="search-input" type="search" placeholder="E#majb3">
+    <!-- Game Controls -->
+    <div class="game-section">
+      <h2 class="section-title">Choose Chord Type</h2>
+      <div class="chord-buttons">
+        <button class="btn btn-chord" id="major-button" onclick="playRandom('major')">
+          <span class="btn-icon">♪</span>
+          <span class="btn-text">Major</span>
+        </button>
+        <button class="btn btn-chord" id="minor-button" onclick="playRandom('minor')">
+          <span class="btn-icon">♪</span>
+          <span class="btn-text">Minor</span>
+        </button>
+        <button class="btn btn-chord" id="major-seventh-button" onclick="playRandom('major-seventh')">
+          <span class="btn-icon">♪</span>
+          <span class="btn-text">Major 7th</span>
+        </button>
+        <button class="btn btn-chord btn-special" id="random-chord-button" onclick="playRandom('random')">
+          <span class="btn-icon">🎲</span>
+          <span class="btn-text">Random</span>
+        </button>
+      </div>
     </div>
 
+    <!-- Game Question -->
+    <div class="game-question">
+      <h3 class="question-text">What chord is playing?</h3>
+      <div class="control-buttons">
+        <button class="btn btn-control disabled" id="replay-button" onclick="disableReplayRefresh()">
+          <span>↻ Replay</span>
+        </button>
+        <button class="btn btn-control disabled" id="refresh-button" onclick="refresh()">
+          <span>⟳ Give Up</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Input -->
+    <div class="search-container">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input 
+          id="search-input" 
+          class="search-input" 
+          type="search" 
+          placeholder="Type chord name (e.g., Cmaj, F#min)"
+          autocomplete="off"
+        >
+      </div>
+    </div>
+
+    <!-- Results List -->
     <div id="output"></div>
+    <ul class="result-list" id="result-list"></ul>
+  </div>
 
-    <!-- <button id="test">test</button> -->
-      <ul class="result-list" id="result-list">
-        <!-- this is where possible search results appear -->
-      </ul>
-
-
+  <script src="chord.js"></script>
 </body>
-<script src="chord.js"></script>
 </html>

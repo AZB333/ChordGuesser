@@ -126,25 +126,21 @@ function playRandom(chord){
     if(chord == 'major'){
         let randomMajor = playRandomMajor();
         correct = randomMajor;
-        // output.textContent = randomMajor.name;
         console.log(randomMajor.name);
     }
     else if(chord == 'minor'){
         let randomMinor = playRandomMinor();
         correct = randomMinor;
-        // output.textContent = randomMinor.name;
         console.log(randomMinor.name);
     }
     else if(chord == 'major-seventh'){
         let randomMajorSeventh = playRandomMajorSeventh();
         correct = randomMajorSeventh;
-        // output.textContent = randomMajorSeventh.name;
         console.log(randomMajorSeventh.name);
     }
     else if(chord == 'random'){
         let randomChord = playRandomChord();
         correct = randomChord;
-        // output.textContent = randomChord.name;
         console.log(randomChord.name);
     }
     disableReplayRefresh();
@@ -169,7 +165,6 @@ function disableReplayRefresh(){
         replayButton.disabled = true;
         refreshButton.classList.add("disabled");
         refreshButton.disabled = true;
-        console.log("disabled");
     }
     else{
         replayButton.classList.remove("disabled");
@@ -177,7 +172,6 @@ function disableReplayRefresh(){
         refreshButton.classList.remove("disabled");
         refreshButton.disabled = false;
         correct.audio.play();
-        console.log("enabled");
     }
 }
 
@@ -209,21 +203,19 @@ userInput.addEventListener("input", () => {
         lowerAllChords = allchords[i].name.toLowerCase(); //set to lowercase
         lowerInput = userInput.value.toLowerCase();
         if(lowerAllChords.includes(lowerInput)){
-            // output.textContent += allchords[i].name; //debug
             let result = document.createElement("li");
             result.textContent = allchords[i].name;
             result.classList.add("result")
             result.addEventListener("click", () => {
 
-                // console.log(correct.name, result.textContent);
                 if(correct != ''){
                     if(result.textContent == correct.name){
-                        output.textContent = "By Odin's Beard, you've done it!"; //you A # lad 
+                        output.textContent = "You are correct! What A# lad!";
                         console.log("correct");
                         updateScore("win");
                     }
                     else{
-                        output.textContent = "Try again next time!";
+                        output.textContent = "That wasn't it, try again!";
                         console.log("incorrect");
                         updateScore("loss");
                     }
